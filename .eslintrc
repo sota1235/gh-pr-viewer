@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": "off"
   }
 }
