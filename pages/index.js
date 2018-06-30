@@ -1,22 +1,11 @@
 import axios from 'axios';
 import React from 'react';
 
-export default class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
+class IndexPageComponent extends React.Component {
+  static async getInitialProps() {
+    const { data } = await axios.get('http://sota1235.com');
 
-    this.state = {
-      data: '',
-    };
-  }
-
-  componentDidMount() {
-    axios.get('https://google.com')
-      .then(({ data }) => {
-        this.state.set({
-          data,
-        });
-      });
+    return { data };
   }
 
   render() {
@@ -26,9 +15,11 @@ export default class IndexPage extends React.Component {
           { 'Welcome to next.js!' }
         </div>
         <div>
-          { this.state.data }
+          { this.props.data }
         </div>
       </div>
     );
   }
 }
+
+export default IndexPageComponent;
