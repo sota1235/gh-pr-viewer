@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import { Button } from '@material-ui/core';
 
 class IndexPageComponent extends React.Component {
   static async getInitialProps() {
@@ -14,6 +15,9 @@ class IndexPageComponent extends React.Component {
         <div>
           { 'Welcome to next.js!' }
         </div>
+        <Button variant="contained">
+          Login
+        </Button>
         <div>
           { this.props.data }
         </div>
