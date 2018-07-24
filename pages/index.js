@@ -3,9 +3,9 @@ import React from 'react';
 
 class IndexPageComponent extends React.Component {
   static async getInitialProps() {
-    const { data } = await axios.get('http://sota1235.com');
-
-    return { data };
+    return {
+      data: 'data',
+    };
   }
 
   render() {
